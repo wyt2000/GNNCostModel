@@ -1,0 +1,41 @@
+% !TeX root = ../main.tex
+
+\ustcsetup{
+  keywords = {
+    深度学习、编译优化、计算图、耗时估计、图神经网络
+  },
+  keywords* = {
+    Deep learning, Compilation optimization, Computational graph, Time consuming estimation, Graph neural network
+  },
+}
+
+\begin{abstract}
+  深度学习编译器是近年来人工智能和编译技术研究的热点。深度学习编译器的一个重要
+  功能是针对不同的目标硬件进行最优编译配置的搜索。为了高效地实现这一功能，深度学习编译器
+  需要在不真正运行程序的前提下，估计出不同硬件配置下程序的实际运行时间，这就要求
+  深度学习编译器能够对计算图建立耗时模型。
+
+  传统的计算图耗时预测模型是采用手工推导的经验公式，具有准确率低，可迁移性差等缺点。本文
+  设计了一种基于图神经网络的计算图耗时预测模型，该模型首先使用全连接神经网络将计算图中
+  结点和边的特征映射到低维特征向量，再将这些特征向量和图的邻接关系作为图神经网络的输入，从而得到整个
+  计算图的嵌入向量，最终使用该嵌入向量进行计算图耗时的预测。
+
+  本文通过多组实验证明了相比于传统方法，基于图神经网络的计算图耗时预测模型在各项评价指标
+  上均有显著提高。同时也证明了图神经网络结构在本文所提出模型中起到了关键作用。
+\end{abstract}
+
+\begin{abstract*}
+  Deep learning compilers are hotspots of artificial intelligence and compilation technique research in recent years.
+  One of the most important functions of deep learning compilers is searching the best compilation configuration on different hardware platforms.
+  In order to search in a rapid way, deep learning compilers should estimate the program execution time on different hardware configurations without running programs, 
+  which asks deep learning compilers to build time consuming models of computational graphs.
+
+  Traditional time consuming models of computational graphs use empirical formulas derived manually, 
+  whose accuracy and generalizability are bad. This thesis designs a computational graph time consuming model based on graph neural network.
+  The model maps the features of nodes and edges in computational graphs to lower-dimension vectors by fully connected neural networks. After that,
+  the model feeds those vectors and the adjacency relation to graph nerual network to get the embedding vector of the whole computational graph.
+  Finally, the graph embedding is used to do the estimation.
+
+  Through many groups of experiments, this thesis proves that compared to traditional models, the computational graph time consuming model based on graph neural network has significant improvements on different kinds of evaluation indicators.
+  The experiments also proves that graph neural networks play an important role in this model.
+\end{abstract*}
